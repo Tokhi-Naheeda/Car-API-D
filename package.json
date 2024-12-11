@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "type": "module",
+  "name": "09-be-server-car-api-naheedatokhi",
+  "version": "1.0.0",
+  "description": "In this project we will create our own Car API, using the HTTP methods **GET**, **POST**, **PATCH**, **DELETE**. You will also be working with request parameters, practise sending responses with different response codes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
