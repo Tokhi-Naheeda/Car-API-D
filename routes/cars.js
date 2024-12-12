@@ -10,7 +10,7 @@ const cars = [
     res.status(200).json(cars)
   });
 
-  //Task-5
+
   carRouter.get("/:id", (req,res)=>{
     const id=Number(req.params.id);
     const car=cars.find((car)=> car.id===(id));
@@ -23,7 +23,7 @@ const cars = [
     res.status(200).json(car)
     }
   })
-  //Task-6
+
   carRouter.post("/create", (req,res)=>{
     const id=Number(req.body.id);
     const name=req.body.name;
@@ -40,7 +40,7 @@ const cars = [
     return res.status(201).json(newCar);
   })
 
-  //Task-7
+
   carRouter.patch("/update/:id", (req,res)=>{
      const id=Number(req.params.id);
      const car=cars.find(car=> car.id===id );
@@ -56,23 +56,6 @@ const cars = [
      res.status(200).json(cars);
   })
 
-  //Task-8
-  /*
-  carRouter.delete("/:id", (req,res)=>{
-    const id=Number(req.params.id);
-    const car=cars.findIndex(car=> car.id===id );
-    if(isNaN(id)){
-      return res.status(400).json({message:"Id is invalid.ID must be a number."})
-    }
-    if(car===-1){
-      return  res.status(404).json({message:"This car do not existiert "});
-    }
-      cars.splice(car, 1)
-      res.status(200).json(cars);
-    
-  })
-*/
-    //Task-8 mit filter
     carRouter.delete("/:id", (req, res) => {
       const id = Number(req.params.id);
       if (isNaN(id)) {
